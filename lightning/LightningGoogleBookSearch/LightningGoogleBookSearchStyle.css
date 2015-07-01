@@ -1,0 +1,78 @@
+.THIS {
+    margin: 5px;
+}
+
+.THIS .searchBox {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    border: solid 1px #dddddd;
+    box-sizing: border-box;
+}
+.THIS .cards {
+    border: 1px solid #dfe0e1;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.THIS .cards:hover {
+    opacity: 0.9;
+    border: 1px solid #2A94D6;
+    cursor: pointer;
+    font-weight: bold;
+}
+.THIS .card-heading {
+    color: #717ECD;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfe0e1;
+}
+.THIS .card-detail {
+    padding: 0 10px;
+}
+.THIS .card-image img {
+    width: 100px;
+}
+
+.THIS .card-image {
+    float: left;
+}
+
+.THIS .bookInfo {
+    float: left;
+    font-size: 20px;
+    color: #4AB471;
+}
+
+.THIS .floatClear:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.THIS ul {
+    margin: 0;
+}
+
+.THIS ul li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-left: -20px;
+}
+
+@media screen and (max-width: 480px) {
+    .THIS .card-detail {
+        width: 440px;
+    }
+    .THIS .card-image img {
+        width: 50px;
+    }
+    .THIS .bookInfo {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,50 @@
+<aura:component controller="GoogleBookSearchController" implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <aura:attribute name="objects" type="Object[]" />
+    <div aura:id="aura-cmp">
+        <div aura:id="searchBoxSection">
+        	<ui:inputText class="searchBox" aura:id="searchText" placeholder="Please Keyword..." keyup="{!c.doSearch}" updateOn="keyup" />
+        </div>
+        <div aura:id="bookListSection">
+            <aura:iteration items="{!v.objects}" var="item">
+                <div class="cards">
+                    <div class="card-heading">
+                    	<ui:outputText value="{!item.volumeInfo.title}" class="title" />
+                    </div>
+                    <div class="card-detail floatClear">
+                    	<div class="card-image">
+                            <a href="{!item.volumeInfo.infoLink}" target="_blank">
+                                <img src="{!item.volumeInfo.imageLinks.thumbnail}" />
+                            </a>
+                        </div>
+                        <div class="bookInfo">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <ui:outputText value="publishedDate : " />
+                                        <ui:outputText value="{!item.volumeInfo.publishedDate}" />
+                                    </li>
+                                    <li>
+                                        <ui:outputText value="publisher : " />
+                                        <ui:outputText value="{!item.volumeInfo.publisher}" />
+                                    </li>
+                                    <li>
+                                        <ui:outputText value="pageCount : " />
+                                        <ui:outputText value="{!item.volumeInfo.pageCount}" />
+                                    </li>
+                                    <li>
+                                        <ui:outputText value="language : " />
+                                        <ui:outputText value="{!item.volumeInfo.language}" />
+                                    </li>
+                                    <li>
+                                        <ui:outputText value="printType : " />
+                                        <ui:outputText value="{!item.volumeInfo.printType}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>
